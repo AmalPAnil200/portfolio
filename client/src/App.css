@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@layer utilities {
+  .bg-radial-gradient {
+    background: radial-gradient(
+      circle at center,
+      var(--tw-gradient-from) 0%,
+      var(--tw-gradient-via) 50%,
+      var(--tw-gradient-to) 100%
+    );
+  }
+
+  /* Custom cursor styles */
+  .cursor-none {
+    cursor: none;
+  }
+
+  /* Hide custom cursor on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    .cursor-none {
+      cursor: auto;
+    }
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-75 {
+    animation-delay: 0.075s;
+  }
+  
+  .animation-delay-150 {
+    animation-delay: 0.15s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+}
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  /* padding: 2rem; */
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  /* background-color: #000000; */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.logo {
+  height: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.scroll-float {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+}
+
+.scroll-float-text .char {
+  display: inline-block; /* keeps letters from collapsing */
+  white-space: pre;      /* preserves spaces */
+}
+/* 
+*{
+  border: 1px solid white;
+} */
